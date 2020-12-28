@@ -1,0 +1,27 @@
+{
+  "name": "rear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sequelize-automate": "sequelize-automate -t js -d bus_ticket -p yangzhen123. -P 3306"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "sequelize-automate": "^1.2.2"
+  },
+  "devDependencies": {
+    "@koa/router": "^10.0.0",
+    "axios": "^0.21.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa-bodyparser": "^4.3.0",
+    "lodash": "^4.17.20",
+    "mysql2": "^2.2.5",
+    "require-directory": "^2.1.1",
+    "sequelize": "^6.3.5",
+    "validator": "^13.5.1"
+  }
+}
