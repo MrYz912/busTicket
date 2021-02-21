@@ -1,0 +1,11 @@
+.BusList .am-button::before {
+  border: none !important;
+}
+
+.BusList .am-button {
+  width: 100% !important;
+}
+
+.BusList .am-navbar-light .am-navbar-title {
+  font-size: 14px !important;
+}
