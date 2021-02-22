@@ -1,5 +1,7 @@
 import { NavBar, Icon, Tabs, Button } from 'antd-mobile';
-import './index.css'
+import List from './listView';
+import './index.css';
+
 const tabs = [
   { title: 'First Tab', key: 't1' },
   { title: 'Second Tab', key: 't2' },
@@ -24,30 +26,26 @@ function RenderTab() {
 function BusList (){
   return (
     <div className="BusList">
-        <div className="topContainer" style={{position: "sticky", top:"0"}}>
+        <div className="topContainer" style={{position: "fixed", top:"0", left: "0", zIndex: "999", width: "100%"}}>
           <NavBar
             mode="light"
             icon={<Icon type="left" />}
             onLeftClick={() => console.log('onLeftClick')}
           >广州市桥汽车站 - 广州天河客运站</NavBar>
-          <div className="tabContainer">
+          <div className="tabContainer" style={{display: "flex"}}>
             <Tabs tabs={tabs}
               initialPage={'t2'}
               renderTab={RenderTab}
+              style={{flex: "1"}}
             >
-              {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                Content of first tab
-                <Button>aaaaaa</Button>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                Content of second tab
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                Content of third tab
-              </div> */}
             </Tabs>
+            <div style={{width: "50px", background: "#fff"}}>
+              <img alt="日期" src="https://tva1.sinaimg.cn/large/008eGmZEgy1gnwo27ixhej305k05kwea.jpg"></img>
+              <Icon id="dateIcon" type="down"></Icon>
+            </div>
           </div>
         </div>
+        <List></List>
     </div>
   );
 }
