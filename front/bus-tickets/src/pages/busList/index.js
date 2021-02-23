@@ -1,5 +1,5 @@
 import { NavBar, Icon, Tabs, Button } from 'antd-mobile';
-import List from './listView';
+import List from './components/listView';
 import './index.css';
 
 const tabs = [

@@ -103,21 +103,38 @@ class List extends React.Component {
       }
       const obj = data[index--];
       return (
-        <div key={rowID} style={{ padding: '0 15px' }}>
-          <div
+        <div className="buslist-info-container" key={rowID}>
+          {/* <div
             style={{
               lineHeight: '50px',
               color: '#888',
               fontSize: 18,
               borderBottom: '1px solid #F6F6F6',
             }}
-          >{obj.title}</div>
-          <div style={{ display: 'flex', padding: '15px 0' }}>
-            <img style={{ height: '64px', marginRight: '15px' }} src={obj.img} alt="" />
+          >{obj.title}</div> */}
+          <div style={{ display: 'flex'}}>
+            <div className="bus-info-l">
+              <div className="bus-time">08:03</div>
+              <div className="bus-time-total">约2时30分</div>
+            </div>
+            <div className="bus-seperate"></div>
+            <div className="bus-info-m">
+              <div className="bus-start">广州市桥汽车站</div>
+              <div className="bus-arrive">广州天河客运站</div>
+              <div class="car-type">短途车</div>
+            </div>
+            <div className="bus-info-r">
+              <div className="price">
+                <small>￥</small>
+                <span>90</span>
+              </div>
+              <div className="total">有票</div>
+            </div>
+            {/* <img style={{ height: '64px', marginRight: '15px' }} src={obj.img} alt="" />
             <div style={{ lineHeight: 1 }}>
               <div style={{ marginBottom: '8px', fontWeight: 'bold' }}>{obj.des}</div>
               <div><span style={{ fontSize: '30px', color: '#FF6E27' }}>{rowID}</span>¥</div>
-            </div>
+            </div> */}
           </div>
         </div>
       );
@@ -126,14 +143,14 @@ class List extends React.Component {
       <ListView
         ref={el => this.lv = el}
         dataSource={this.state.dataSource}
-        renderHeader={() => <span>header</span>}
+        // renderHeader={() => <span>header</span>}
         renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
           {this.state.isLoading ? 'Loading...' : 'Loaded'}
         </div>)}
-        style={{paddingTop: "88.5px"}}
+        style={{paddingTop: "98.5px"}}
         renderRow={row}
         renderSeparator={separator}
-        className="am-list"
+        className="bus-list"
         pageSize={4}
         useBodyScroll
         onScroll={() => { console.log('scroll'); }}
