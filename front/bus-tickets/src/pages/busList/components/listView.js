@@ -101,7 +101,7 @@ class List extends React.Component {
       if (index < 0) {
         index = data.length - 1;
       }
-      const obj = data[index--];
+      // const obj = data[index--];
       return (
         <div className="buslist-info-container" key={rowID}>
           {/* <div
@@ -121,7 +121,7 @@ class List extends React.Component {
             <div className="bus-info-m">
               <div className="bus-start">广州市桥汽车站</div>
               <div className="bus-arrive">广州天河客运站</div>
-              <div class="car-type">短途车</div>
+              <div className="car-type">短途车</div>
             </div>
             <div className="bus-info-r">
               <div className="price">
@@ -153,10 +153,10 @@ class List extends React.Component {
         className="bus-list"
         pageSize={4}
         useBodyScroll
-        onScroll={() => { console.log('scroll'); }}
+        // onScroll={() => { console.log('scroll'); }}
         scrollRenderAheadDistance={500}
-        onEndReached={this.onEndReached}
-        onEndReachedThreshold={10}
+        // onEndReached={this.onEndReached}
+        // onEndReachedThreshold={10}
       />
     );
   }

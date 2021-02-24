@@ -14,7 +14,7 @@ const tabs = [
 
 function RenderTab() {
   return (
-    <Button style={{fontSize: "12px"}}>
+    <Button className="tab-button" style={{fontSize: "12px"}}>
       <div style={{height: "100%", lineHeight: "normal"}}>
         <div style={{height: "50%", verticalAlign: "center"}}>02/21</div>
         <div style={{height: "50%", verticalAlign: "center"}}>今天</div>
@@ -26,13 +26,13 @@ function RenderTab() {
 function BusList (){
   return (
     <div className="BusList">
-        <div className="topContainer" style={{position: "fixed", top:"0", left: "0", zIndex: "999", width: "100%"}}>
+        <div className="top-container">
           <NavBar
             mode="light"
             icon={<Icon type="left" />}
             onLeftClick={() => console.log('onLeftClick')}
           >广州市桥汽车站 - 广州天河客运站</NavBar>
-          <div className="tabContainer" style={{display: "flex"}}>
+          <div className="tab-container" style={{display: "flex"}}>
             <Tabs tabs={tabs}
               initialPage={'t2'}
               renderTab={RenderTab}
@@ -46,6 +46,7 @@ function BusList (){
           </div>
         </div>
         <List></List>
+        <Button className="buslist-tool">方案排序</Button>
     </div>
   );
 }

@@ -33,7 +33,7 @@ function Home (){
         </Card>
       </WingBlank>
       <Button icon={<img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gnr25ujhkej305k05kq2v.jpg" alt="个人中心" style={{margin: "0"}}/>}
-        style={{position: "absolute", bottom: "60px", right: "60px", borderRadius: "50%", width: "47px", boxShadow: "0px 0px 5px 2px rgba(0, 0, 0, 0.2)"}}>
+        style={{position: "absolute", bottom: "60px", right: "60px", borderRadius: "50%", width: "47px", boxShadow: "0 1px 3px 1px rgb(0 0 0 / 20%)"}}>
       </Button>
     </div>
   );
