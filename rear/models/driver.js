@@ -13,48 +13,75 @@ module.exports = sequelize => {
       comment: null,
       field: "id"
     },
-    license_plate: {
+    name: {
       type: DataTypes.STRING(255),
       allowNull: false,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "license_plate"
+      field: "name"
     },
-    seat: {
+    age: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "seat"
+      field: "age"
     },
-    create_time: {
+    sex: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "sex"
+    },
+    founder: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: "创建者",
+      field: "founder"
+    },
+    modifier: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: "修改者",
+      field: "modifier"
+    },
+    created_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "created_at"
     },
-    update_time: {
+    updated_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
+      field: "updated_at"
     }
   };
   const options = {
-    tableName: "bus",
+    tableName: "driver",
     comment: "",
     indexes: []
   };
-  const BusModel = sequelize.define("bus_model", attributes, options);
-  return BusModel;
+  const DriverModel = sequelize.define("driver_model", attributes, options);
+  return DriverModel;
 };

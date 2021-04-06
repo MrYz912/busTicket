@@ -1,4 +1,4 @@
-.BusList .top-container {
+.bus-list .top-container {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -6,30 +6,30 @@
   width: 100%;
 }
 
-.BusList .tab-button::before {
+.bus-list .tab-button::before {
   border: none !important;
 }
 
-.BusList .tab-button {
+.bus-list .tab-button {
   width: 100% !important;
 }
 
-.BusList .am-navbar-light .am-navbar-title {
+.bus-list .am-navbar-light .am-navbar-title {
   font-size: 14px !important;
 }
 
-.BusList .am-list .am-list-view-scrollview {
+.bus-list .am-list .am-list-view-scrollview {
   padding-top: 100px;
 }
 
-.BusList img {
+.bus-list img {
   display: block;
   margin-left: 10px;
   height: 20px;
   width: 20px;
 }
 
-.BusList #dateIcon {
+.bus-list #dateIcon {
   height: 20px;
   width: 20px;
   margin-left: 10px;

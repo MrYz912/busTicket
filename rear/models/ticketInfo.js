@@ -13,6 +13,15 @@ module.exports = sequelize => {
       comment: null,
       field: "id"
     },
+    tableId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: '',
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "tableId"
+    },
     day: {
       type: DataTypes.DATEONLY,
       allowNull: true,
@@ -25,7 +34,7 @@ module.exports = sequelize => {
     time: {
       type: DataTypes.TIME,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -34,7 +43,7 @@ module.exports = sequelize => {
     startStation: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -43,7 +52,7 @@ module.exports = sequelize => {
     endStation: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -52,7 +61,7 @@ module.exports = sequelize => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -61,11 +70,47 @@ module.exports = sequelize => {
     money: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: "价格",
       field: "money"
+    },
+    duration: {
+      type: DataTypes.TIME,
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: "耗时",
+      field: "duration"
+    },
+    riderId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "riderId"
+    },
+    riderName: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      defaultValue: '',
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "riderName"
+    },
+    riderCreditId: {
+      type: DataTypes.STRING(20),
+      allowNull: true,
+      defaultValue: '',
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "riderCreditId"
     },
     license_plate: {
       type: DataTypes.STRING(255),
@@ -75,6 +120,15 @@ module.exports = sequelize => {
       autoIncrement: false,
       comment: "车牌",
       field: "license_plate"
+    },
+    driverId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "driverId"
     },
     founder: {
       type: DataTypes.STRING(255),
@@ -94,24 +148,6 @@ module.exports = sequelize => {
       comment: "修改者",
       field: "modifier"
     },
-    create_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "create_time"
-    },
-    update_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "update_time"
-    }
   };
   const options = {
     tableName: "ticketInfo",

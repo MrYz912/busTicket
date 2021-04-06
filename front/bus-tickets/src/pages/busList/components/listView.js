@@ -150,7 +150,7 @@ class List extends React.Component {
         style={{paddingTop: "98.5px"}}
         renderRow={row}
         renderSeparator={separator}
-        className="bus-list"
+        className="bus-list-view"
         pageSize={4}
         useBodyScroll
         // onScroll={() => { console.log('scroll'); }}

@@ -13,48 +13,48 @@ module.exports = sequelize => {
       comment: null,
       field: "id"
     },
-    bus: {
+    license_plate: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "license_plate"
+    },
+    seat: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "bus"
+      field: "seat"
     },
-    driver: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "driver"
-    },
-    create_time: {
+    created_at: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "created_at"
     },
-    update_time: {
+    updated_at: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
+      field: "updated_at"
     }
   };
   const options = {
-    tableName: "bus2driver",
+    tableName: "bus",
     comment: "",
     indexes: []
   };
-  const Bus2DriverModel = sequelize.define("bus2driver_model", attributes, options);
-  return Bus2DriverModel;
+  const BusModel = sequelize.define("bus_model", attributes, options);
+  return BusModel;
 };

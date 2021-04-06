@@ -16,7 +16,7 @@ module.exports = sequelize => {
     name: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -32,33 +32,15 @@ module.exports = sequelize => {
       field: "age"
     },
     creditId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(20),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
       field: "creditId",
       unique: "creditId"
     },
-    create_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "create_time"
-    },
-    update_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "update_time"
-    }
   };
   const options = {
     tableName: "rider",

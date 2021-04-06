@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "basic-auth": "^2.0.1",
+    "bcryptjs": "^2.4.3",
     "koa": "^2.13.0",
+    "koa2-cors": "^2.0.6",
     "sequelize-automate": "^1.2.2"
   },
   "devDependencies": {

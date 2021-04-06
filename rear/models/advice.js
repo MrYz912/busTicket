@@ -4,66 +4,75 @@ const {
 
 module.exports = sequelize => {
   const attributes = {
-    userId: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: null,
       primaryKey: true,
       autoIncrement: true,
       comment: null,
+      field: "id"
+    },
+    message: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      defaultValue: '',
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "message"
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: '',
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
       field: "userId"
     },
-    nickname: {
+    userName: {
       type: DataTypes.STRING(255),
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "nickname"
+      field: "userName"
     },
-    password: {
+    location: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "password"
+      field: "location"
     },
-    root: {
-      type: DataTypes.STRING(1),
-      allowNull: false,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "是否为管理员，1为管理员，0为普通用户",
-      field: "root"
-    },
-    create_time: {
+    time: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "time"
     },
-    update_time: {
-      type: DataTypes.DATE,
+    phone: {
+      type: DataTypes.STRING(255),
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
-    }
+      field: "phone"
+    },
   };
   const options = {
-    tableName: "user",
+    tableName: "advice",
     comment: "",
     indexes: []
   };
-  const UserModel = sequelize.define("user_model", attributes, options);
-  return UserModel;
+  const AdviceModel = sequelize.define("advice_model", attributes, options);
+  return AdviceModel;
 };

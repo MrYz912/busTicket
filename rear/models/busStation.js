@@ -5,27 +5,27 @@ const {
 module.exports = sequelize => {
   const attributes = {
     id: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: null,
       primaryKey: true,
-      autoIncrement: false,
+      autoIncrement: true,
       comment: null,
       field: "id"
     },
-    city: {
-      type: DataTypes.STRING(255),
+    cityId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: 0,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "city"
+      field: "cityId"
     },
     station: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -39,7 +39,8 @@ module.exports = sequelize => {
       autoIncrement: false,
       comment: null,
       field: "address"
-    }
+    },
+
   };
   const options = {
     tableName: "busStation",

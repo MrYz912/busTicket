@@ -13,48 +13,48 @@ module.exports = sequelize => {
       comment: null,
       field: "id"
     },
-    user: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "user"
+      field: "userId"
     },
-    table: {
+    riderId: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "table"
+      field: "riderId"
     },
-    create_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
+    creditId: {
+      type: DataTypes.STRING(20),
+      allowNull: false,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "creditId",
     },
-    update_time: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
+    name: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
-    }
+      field: "name"
+    },
   };
   const options = {
-    tableName: "user2table",
+    tableName: "user2rider",
     comment: "",
     indexes: []
   };
-  const User2TableModel = sequelize.define("user2table_model", attributes, options);
-  return User2TableModel;
+  const User2RiderModel = sequelize.define("user2rider_model", attributes, options);
+  return User2RiderModel;
 };

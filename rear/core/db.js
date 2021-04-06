@@ -13,17 +13,17 @@ const sequelize = new Sequelize(dbName, user, password, {
   dialect: 'mysql',
   host,
   port,
-  logging: true,
+  logging: false,
   timezone: '+08:00',
   define: {
-    timestamps: true,
+    timestamps: false,
     paranoid: true,
     underscored: true
   }
 })
 
 sequelize.sync({
-  force: false
+  force: false,
 })
 
 module.exports = {

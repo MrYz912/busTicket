@@ -13,75 +13,48 @@ module.exports = sequelize => {
       comment: null,
       field: "id"
     },
-    name: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "name"
-    },
-    age: {
+    busId: {
       type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "age"
+      field: "busId"
     },
-    sex: {
-      type: DataTypes.STRING(255),
+    driverId: {
+      type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "sex"
+      field: "driverId"
     },
-    founder: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "创建者",
-      field: "founder"
-    },
-    modifier: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "修改者",
-      field: "modifier"
-    },
-    create_time: {
+    created_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "created_at"
     },
-    update_time: {
+    updated_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
+      field: "updated_at"
     }
   };
   const options = {
-    tableName: "driver",
+    tableName: "bus2driver",
     comment: "",
     indexes: []
   };
-  const DriverModel = sequelize.define("driver_model", attributes, options);
-  return DriverModel;
+  const Bus2DriverModel = sequelize.define("bus2driver_model", attributes, options);
+  return Bus2DriverModel;
 };

@@ -25,7 +25,7 @@ function RenderTab() {
 
 function BusList (){
   return (
-    <div className="BusList">
+    <div className="bus-list">
         <div className="top-container">
           <NavBar
             mode="light"

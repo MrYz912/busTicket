@@ -25,25 +25,25 @@ module.exports = sequelize => {
     time: {
       type: DataTypes.TIME,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
       field: "time"
     },
-    stratStation: {
+    startStation: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "stratStation"
+      field: "startStation"
     },
     endStation: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      defaultValue: null,
+      defaultValue: '',
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -52,7 +52,7 @@ module.exports = sequelize => {
     money: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: 0,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
@@ -67,6 +67,24 @@ module.exports = sequelize => {
       comment: "耗时",
       field: "duration"
     },
+    count: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: null,
+      field: "count"
+    },
+    distance: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      defaultValue: null,
+      primaryKey: false,
+      autoIncrement: false,
+      comment: "距离",
+      field: "distance"
+    },
     license_plate: {
       type: DataTypes.STRING(255),
       allowNull: true,
@@ -76,14 +94,14 @@ module.exports = sequelize => {
       comment: "车牌",
       field: "license_plate"
     },
-    driver: {
-      type: DataTypes.STRING(255),
+    driverId: {
+      type: DataTypes.INTEGER,
       allowNull: true,
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "driver"
+      field: "driverId"
     },
     founder: {
       type: DataTypes.STRING(255),
@@ -103,23 +121,23 @@ module.exports = sequelize => {
       comment: "修改者",
       field: "modifier"
     },
-    create_time: {
+    created_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "create_time"
+      field: "created_at"
     },
-    update_time: {
+    updated_at: {
       type: DataTypes.DATE,
       allowNull: true,
       defaultValue: "CURRENT_TIMESTAMP(6)",
       primaryKey: false,
       autoIncrement: false,
       comment: null,
-      field: "update_time"
+      field: "updated_at"
     }
   };
   const options = {
