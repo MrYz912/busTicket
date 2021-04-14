@@ -43,13 +43,13 @@ export default {
       axios.post(`${root.baseUrl}/token`, {
         account: this.user_fromData.username,
         secret: this.user_fromData.password,
-        root: '0',
+        root: 0,
       }).then((res) => {
         const { status, data } = res;
         if (status === 200) {
           localStorage.setItem('token', data.token + ':');
           localStorage.setItem('name', data.name);
-          this.$router.go(-1);
+          this.$router.push('/');
         }
       }).catch((error) => {
         const { errorCode, msg } = error.response.data;

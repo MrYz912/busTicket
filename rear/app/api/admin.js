@@ -1,12 +1,11 @@
 const Router = require('@koa/router');
 const { RegisterValidator } = require('../validators/validators');
-// const { login } = require('./token');
 const { sequelize } = require("../../core/db");
 const UserModel = require('../../models/user');
 
 const userModel = UserModel(sequelize);
 const router = new Router({
-  prefix: '/user'
+  prefix: '/admin'
 });
 
 // 注册接口
@@ -15,7 +14,7 @@ router.post('/register', async (ctx) => {
   const user1 = await userModel.findOne({
     where: {
       nickname: v.get('body.nickname'),
-      root: 0,
+      root: 1,
     }
   });
   // 如果已经存在
@@ -25,7 +24,7 @@ router.post('/register', async (ctx) => {
     const user = {
       password: v.get('body.password2'),
       nickname: v.get('body.nickname'),
-      root: 0,
+      root: 1,
     };
     const r = await userModel.create(user);
     //返回成功

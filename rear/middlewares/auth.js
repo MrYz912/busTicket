@@ -11,7 +11,6 @@ class Auth {
       const token = basicAuth(ctx.req);
       let errMsg = 'token不合法';
       if (!token || !token.name) {
-        console.log('进来了');
         throw new global.errs.Forbiden();
       }
       try {

@@ -25,4 +25,19 @@ router.post('/', new Auth(AuthType.USER).m, async(ctx, next) => {
   }
 });
 
+router.get('/list', new Auth(AuthType.USER).m, async(ctx, next) => {
+  const pageData = JSON.parse(ctx.query.pageData);
+  const limit = pageData.pageSize || 10;
+  const offset = (pageData.current - 1) * limit;
+
+  const searchAdvice = await adviceModel.findAndCountAll({
+    attributes: ['id', 'message', 'userName', 'location', 'time', 'phone'],
+    limit,
+    offset,
+  });
+  ctx.body = {
+    searchAdvice,
+  }
+})
+
 module.exports = router;

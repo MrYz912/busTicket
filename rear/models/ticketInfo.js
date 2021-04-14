@@ -130,24 +130,6 @@ module.exports = sequelize => {
       comment: null,
       field: "driverId"
     },
-    founder: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "创建者",
-      field: "founder"
-    },
-    modifier: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "修改者",
-      field: "modifier"
-    },
   };
   const options = {
     tableName: "ticketInfo",

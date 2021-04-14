@@ -28,7 +28,6 @@ router.post('/', async (ctx) => {
     token,
     name: v.get('body.account'),
   }
-  // throw new global.errs.Success();
 });
 
 async function login(account, secret, type) {

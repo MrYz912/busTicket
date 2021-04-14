@@ -8,9 +8,7 @@ import localStore from '../src/store/index';
 
 Vue.use(Vant);
 Vue.config.productionTip = false;
-// Vue.prototype.$http = http;
 Vue.prototype.$message = Vant.Notify;
-// Vue.prototype.$EventBus = new Vue();
 
 /* eslint-disable no-new */
 new Vue({

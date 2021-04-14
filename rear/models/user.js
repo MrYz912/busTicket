@@ -46,24 +46,6 @@ module.exports = sequelize => {
       comment: "是否为管理员，1为管理员，0为普通用户",
       field: "root"
     },
-    created_at: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "created_at"
-    },
-    updated_at: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "updated_at"
-    }
   };
   const options = {
     tableName: "user",

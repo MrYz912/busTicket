@@ -59,15 +59,15 @@ export default {
     // 新增或编辑
     savePassenger() {
       if (this.$route.query.isNew == 1) {
-        if (!this.name) {
+        if (!this.fromData.name) {
           this.$notify({ type: 'danger', message: '请填写姓名' });
-        } else if (!this.creditId) {
+        } else if (!this.fromData.creditId) {
           this.$notify({ type: 'danger', message: '请填写身份证号' });
         } else {
           const token = localStorage.getItem('token');
           const obj = {
-            name: this.name,
-            creditId: this.creditId,
+            name: this.fromData.name,
+            creditId: this.fromData.creditId,
           };
           axios.post(`${root.baseUrl}/passenger/create`, obj, {
             headers: {

@@ -49,7 +49,6 @@ export default {
         nickname: this.user_fromData.username,
         password1: this.user_fromData.password1,
         password2: this.user_fromData.password2,
-        root: '0',
       }).then(() => {
         this.$notify({ type: 'success', message: '注册成功' });
         this.$router.push('/signIn');

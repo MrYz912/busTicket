@@ -20,7 +20,7 @@ router.get('/city', async(ctx, next) => {
       city,
     }
   }
-})
+});
 
 router.get('/station', async(ctx, next) => {
   const station = await busStationModel.findAll({
@@ -36,6 +36,6 @@ router.get('/station', async(ctx, next) => {
       station,
     }
   }
-})
+});
 
 module.exports = router;

@@ -57,7 +57,7 @@ class TokenValidator extends LinValidator {
   }
 
   validateLoginType(val) {
-    if (!val.body.root) {
+    if (val.body.root !== 0 && val.body.root !== 1) {
       throw new Error('type必须是参数');
     }
     if (!LoginType.isThisType(val.body.root)) {

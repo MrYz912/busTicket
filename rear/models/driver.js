@@ -40,24 +40,6 @@ module.exports = sequelize => {
       comment: null,
       field: "sex"
     },
-    founder: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "创建者",
-      field: "founder"
-    },
-    modifier: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "修改者",
-      field: "modifier"
-    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: true,

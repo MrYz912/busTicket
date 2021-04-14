@@ -8,8 +8,8 @@ function isThisType(val) {
 }
 
 const LoginType = {
-  USER_NICKNAME: "0",
-  ADMIN_NICKNAME: "1",
+  USER_NICKNAME: 0,
+  ADMIN_NICKNAME: 1,
   isThisType,
 }
 

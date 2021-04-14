@@ -103,42 +103,6 @@ module.exports = sequelize => {
       comment: null,
       field: "driverId"
     },
-    founder: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "创建者",
-      field: "founder"
-    },
-    modifier: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-      defaultValue: null,
-      primaryKey: false,
-      autoIncrement: false,
-      comment: "修改者",
-      field: "modifier"
-    },
-    created_at: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "created_at"
-    },
-    updated_at: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: "CURRENT_TIMESTAMP(6)",
-      primaryKey: false,
-      autoIncrement: false,
-      comment: null,
-      field: "updated_at"
-    }
   };
   const options = {
     tableName: "timeTable",
