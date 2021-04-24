@@ -20,8 +20,8 @@
         <div v-if="showChange" class="id-information-button">
           <van-button class="id-button-l" size="small" @click="changeTicket(item)">改签</van-button>
           <van-button class="id-button-r" size="small" @click="showDeleteDialog">退票</van-button>
-          <van-dialog v-model="showDialog" message="确认退票吗" show-cancel-button
-            @confirm="sureDelete(item)" />
+          <van-dialog v-model="showDialog" title="确认退票吗" message="退票要收取20%手续费"
+            show-cancel-button @confirm="sureDelete(item)" />
         </div>
       </div>
     </div>
